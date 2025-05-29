@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hyderabad Updates Daily Discounts</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0; padding: 0;
+      direction: rtl;
+      color: #333;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    .product {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      display: flex;
+      gap: 20px;
+      padding: 15px;
+      align-items: center;
+    }
+    .product img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    .details {
+      flex-grow: 1;
+    }
+    .details h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #34495e;
+    }
+    .details p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #27ae60;
+      margin: 10px 0;
+    }
+    .btn {
+      background-color: #2980b9;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+    .btn:hover {
+      background-color: #1c5980;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #777;
+      margin-top: 40px;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  Hyderabad Updates Daily Discounts
+</header>
+
+<div class="container" id="products-container">
+  <!-- Products will be injected here -->
+</div>
+
+<footer>
+  &copy; 2025 Hyderabad Updates Daily Discounts. All rights reserved.
+</footer>
+
+<script>
+  const products = [
+    {
+      name: "Stylish Wristwatch",
+      description: "Stylish and durable wristwatch with a sleek design.",
+      price: "PKR 1,500",
+      image: "https://img.kwcdn.com/product/fancy/b9f7e5dc-9da9-4fad-890f-9b1223a87dc8.jpg",
+      link: "https://share.temu.com/tOb24Kxx4WA"
+    },
+    {
+      name: "Ergonomic Office Chair",
+      description: "Ergonomic office chair with adjustable features.",
+      price: "PKR 7,000",
+      image: "https://img.kwcdn.com/product/fancy/05cd864a-932c-46b8-aa26-90c89ae500b4.jpg",
+      link: "https://share.temu.com/CmmhKlyE0rA"
+    },
+    {
+      name: "Portable Bluetooth Speaker",
+      description: "Portable Bluetooth speaker with high-quality sound.",
+      price: "PKR 3,200",
+      image: "https://img.kwcdn.com/product/fancy/147cdc40-8179-4c13-bae5-190301507f47.jpg",
+      link: "https://share.temu.com/YEYM5tgbmPA"
+    },
+    {
+      name: "Compact Air Purifier",
+      description: "Compact and efficient air purifier for small rooms.",
+      price: "PKR 4,500",
+      image: "https://img.kwcdn.com/product/fancy/53d9b9ca-4fce-4cc4-a1de-ee5fddad726f.jpg",
+      link: "https://share.temu.com/sVSc7Xlwi0A"
+    },
+    {
+      name: "Multi-functional Kitchen Blender",
+      description: "Multi-functional kitchen blender with various attachments.",
+      price: "PKR 5,800",
+      image: "https://img.kwcdn.com/product/fancy/de3c9d28-e928-4e3c-8814-f06698b30eef.jpg",
+      link: "https://share.temu.com/4hPCbJgptcA"
+    },
+    {
+      name: "Stylish Women's Sneakers",
+      description: "Stylish and comfortable women's sneakers.",
+      price: "PKR 2,400",
+      image: "https://img.kwcdn.com/product/fancy/735a1a8b-6f4f-48cb-afd3-e38a4091b1c9.jpg",
+      link: "https://share.temu.com/Y4mcMShVObA"
+    },
+    {
+      name: "High-resolution Digital Camera",
+      description: "High-resolution digital camera with multiple features.",
+      price: "PKR 12,000",
+      image: "https://img.kwcdn.com/product/fancy/839fbff3-abb8-455b-8f98-8791a370e0d4.jpg",
+      link: "https://share.temu.com/x68veEYTQlA"
+    },
+    {
+      name: "Smart LED Desk Lamp",
+      description: "Smart LED desk lamp with adjustable brightness.",
+      price: "PKR 1,800",
+      image: "https://img.kwcdn.com/product/fancy/f98e5b24-dd9f-42a7-a3cb-2222b7e1232b.jpg",
+      link: "https://share.temu.com/vhYea48uIWA"
+    },
+    {
+      name: "Portable Power Bank",
+      description: "Portable power bank with fast charging capabilities.",
+      price: "PKR 2,000",
+      image: "https://img.kwcdn.com/product/fancy/33498c28-1ac7-4316-9842-27e148ce05e9.jpg",
+      link: "https://share.temu.com/KO6yvqc4P4A"
+    },
+    {
+      name: "Compact Travel Backpack",
+      description: "Compact and lightweight travel backpack.",
+      price: "PKR 1,200",
+      image: "https://img.kwcdn.com/product/fancy/92d242ca-6f4c-46a5-95f0-e6b6d4e6c1ff.jpg",
+      link: "https://share.temu.com/rg5ZdnthqsA"
+    },
+    {
+      name: "Wireless Earbuds",
+      description: "High-quality wireless earbuds with noise cancellation.",
+      price: "PKR 3,500",
+      image: "https://img.kwcdn.com/product/fancy/61dbeea9-2f35-4681-aa8b-4d78155f1274.jpg",
+      link: "https://share.temu.com/IO6MyFsKqhA"
+    }
+  ];
+
+  const container = document.getElementById('products-container');
+
+  products.forEach(product => {
+    const productDiv = document.createElement('div');
+    productDiv.className = 'product';
+
+    productDiv.innerHTML = `
+      <img src="${product.image}" alt="${product.name}" />
+      <div class="details">
+        <h2>${product.name}</h2>
+        <p>${product.description}</p>
+        <p class="price">${product.price}</p>
+        <a class="btn" href="${product.link}" target="_blank" rel="noopener">خرید کریں</a>
+      </div>
+    `;
+
+    container.appendChild(productDiv);
+  });
+</script>
+
+</body>
+</html>
